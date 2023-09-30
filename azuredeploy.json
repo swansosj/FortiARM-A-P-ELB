@@ -20,12 +20,6 @@
             "description": "Name of Customer"
         }
       },
-      "fortiGateNamePrefix": {
-        "type": "string",
-        "metadata": {
-          "description": "Naming prefix for all deployed resources. The FortiGate VMs will have the suffix '-FGT-A' and '-FGT-B'. For example if the prefix is 'ACME01' the FortiGates will be named 'ACME01-FGT-A' and 'ACME01-FGT-B'"
-        }
-      },
       "fortiGateImageSKU": {
         "type": "string",
         "defaultValue": "fortinet_fg-vm",
@@ -622,7 +616,7 @@
     },
     "resources": [
       {
-        "name": "[concat(parameters('fortiGateNamePrefix'), '-fortinetdeployment-', uniquestring(resourceGroup().id))]",
+        "name": "[concat(parameters('customerName'), '-fortinetdeployment-', uniquestring(resourceGroup().id))]",
         "type": "Microsoft.Resources/deployments",
         "apiVersion": "2021-04-01",
         "properties": {
@@ -784,7 +778,7 @@
         "properties": {
           "publicIPAllocationMethod": "Static",
           "dnsSettings": {
-            "domainNameLabel": "[concat(toLower(parameters('fortiGateNamePrefix')), '-', uniquestring(resourceGroup().id))]"
+            "domainNameLabel": "[concat(toLower(parameters('customerName')), '-', uniquestring(resourceGroup().id))]"
           }
         }
       },
