@@ -28,7 +28,7 @@
           "fortinet_fg-vm_payg_2022"
         ],
         "metadata": {
-          "description": "Identifies whether to to use PAYG (on demand licensing) or BYOL license model (where license is purchased separately)"
+          "description": "Identifies whether to to use PAYG or the customer has stated they will bring their own license."
         }
       },
       "fortiGateImageVersion": {
@@ -72,14 +72,14 @@
           "latest"
         ],
         "metadata": {
-          "description": "Select the FortiGate image version"
+          "description": "Select the FortiGate image version. Ask the customer, ESS, or CN-CS for clarification."
         }
       },
       "fortiGateAdditionalCustomData": {
         "type": "string",
         "defaultValue": "",
         "metadata": {
-          "description": "The ARM template provides a basic configuration. Additional configuration can be added here."
+          "description": "Additional CLI commands entered here. Leave blank for a default configuration."
         }
       },
       "instanceType": {
@@ -185,7 +185,7 @@
         "type": "string",
         "defaultValue": "",
         "metadata": {
-          "description": "Name of Public IP address, if no name is provided the default name will be the Resource Group Name as the Prefix and '-FGT-PIP' as the suffix"
+          "description": "Name of Public IP address, if no name is provided the default iVision naming convention will be applied."
         }
       },
       "publicIP1ResourceGroup": {
@@ -204,7 +204,7 @@
           "none"
         ],
         "metadata": {
-          "description": "Public IP for management of the FortiGate A. This deployment uses a Standard SKU Azure Load Balancer and requires a Standard SKU public IP. Microsoft Azure offers a migration path from a basic to standard SKU public IP. The management IP's for both FortiGate can be set to none. If no alternative internet access is provided, the SDN Connector functionality for dynamic objects will not work."
+          "description": "Public IP for management of the first Fortigate. This deployment uses a Standard SKU Azure Load Balancer and requires a Standard SKU public IP. Microsoft Azure offers a migration path from a basic to standard SKU public IP. The management IP's for both FortiGate can be set to none. If no alternative internet access is provided, the SDN Connector functionality for dynamic objects will not work."
         }
       },
       "publicIP2Name": {
