@@ -12,7 +12,7 @@ This Template is for a ForiGate HA Active Passive with External Load Balancer.
 
 ### Azure Portal
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswansosj%2FPaloARM%2Fmain%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fswansosj%2FFortiARM-A-P-ELB%2Fmain%2Fazuredeploy.json)
 
 ## Requirements-and-limitations
 
